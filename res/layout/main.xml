@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:id="@+id/lowestLayout">
+
+    <ViewFlipper
+        android:id="@+id/main_flipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnNext"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageButton1" >
+
+    </ViewFlipper>
+
+<ImageButton
+    android:id="@+id/btnNext"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:onClick="onRight"
+     android:src="@drawable/n_seekforward"
+     android:background="@null" />
+
+<ImageButton
+    android:id="@+id/btnPrevious"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:onClick="onLeft"
+    android:src="@drawable/n_seekback"
+    android:background="@null" />
+
+<TextView
+    android:id="@+id/myHeader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/toggleButton1"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_toLeftOf="@+id/imageButton1"
+    android:gravity="center"
+    android:text="Image Gallery"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<ImageButton
+    android:id="@+id/imageButton1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:src="@drawable/n_right"
+    android:background="@null" 
+    android:onClick="onClick"/>
+
+<ToggleButton
+    android:id="@+id/toggleButton1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/main_flipper"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:textOn="Vibrate"
+    android:textOff="Silent"
+    android:onClick="onToggleClicked" />
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_toRightOf="@+id/btnPrevious" />
+
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MusicActivity" >
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnGal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btnGal"
+        android:text="Music Player"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+         />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/songTitle2"
+        android:background="@drawable/border_ui"
+        android:divider="#242424"
+        android:dividerHeight="1dp" >
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="315dp" >
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/albumCover"
+        android:layout_width="277dp"
+        android:layout_height="286dp"
+        android:layout_above="@+id/btnMute"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/relativeLayout1"
+        android:layout_alignTop="@+id/list"
+        android:src="@drawable/selena" />
+
+    <ImageButton
+        android:id="@+id/btnPrevSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:src="@drawable/n_skipback" />
+
+    <ImageButton
+        android:id="@+id/btnGal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:src="@drawable/n_left" />
+
+    <TextView
+        android:id="@+id/songTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:layout_toLeftOf="@+id/btnGal"
+        android:text="Now Playing: Song Title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/songProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPrevSong"
+        android:layout_marginBottom="23dp"
+        android:layout_toLeftOf="@+id/list"
+        android:layout_toRightOf="@+id/btnPrevSong"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:progressDrawable="@drawable/progress_drawable"
+        android:thumb="@drawable/thumb_drawable" />
+
+    <ImageView
+        android:id="@+id/btnMute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/songProgressBar"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/n_mute" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/songProgressBar"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:src="@drawable/n_pause" />
+
+    <ImageButton
+        android:id="@+id/btnNextSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btnPlay"
+        android:background="@null"
+        android:src="@drawable/n_skipforward" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/header"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textOn="Vibrate"
+   		android:textOff="Silent"
+    	android:onClick="onToggleClicked" />
+
+</RelativeLayout>

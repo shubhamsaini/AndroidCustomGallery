@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, AndroidCustomGalleryActivity!</string>
+    <string name="app_name">Cognitive Jewellery</string><string name="button1">Music Player</string>
+    
+    <string name="MusicHead">Music Activity</string>
+    <string name="rcvdText">ReceivedText</string>
+    <string name="songTitle">Song Title</string>
+    <string name="btnPrev">Previous</string>
+    <string name="btnPlay">Pause</string>
+    <string name="btnNext">Next</string>
+    <string name="btnPlaylist">Playlist</string>
+    <string name="volUp">Volume Up</string>
+    <string name="volDown">Volume Down</string>
+</resources>
